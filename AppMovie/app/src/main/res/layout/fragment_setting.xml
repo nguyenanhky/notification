@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".ui.setting.SettingFragment">
+
+    <TextView
+        android:id="@+id/edtFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/edtFilter">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/popular_movie" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMovieWithRateFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layoutCategory">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie with rate from"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtMoveWithRateFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="5" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutFromRelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layoutMovieWithRateFrom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Release"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtFromRelease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="2015" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSortBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layoutFromRelease">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtSortBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Relase Date" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
