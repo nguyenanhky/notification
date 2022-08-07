@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieFragment">
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="kynv1.fsoft.appmoviefinally.ui.movie.MovieFragment"
+        android:label="@string/popular_movies"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_movieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="kynv1.fsoft.appmoviefinally.ui.favorite.FavoriteFragment"
+        android:label="@string/favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="kynv1.fsoft.appmoviefinally.ui.setting.SettingFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_reminderFragment"
+            app:destination="@id/reminderFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="kynv1.fsoft.appmoviefinally.ui.about.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="kynv1.fsoft.appmoviefinally.ui.infomation.InformationFragment"
+        tools:layout="@layout/fragment_information"
+        android:label="InformationFragment" />
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="kynv1.fsoft.appmoviefinally.ui.movieDetail.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" />
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="kynv1.fsoft.appmoviefinally.ui.reminder.ReminderFragment"
+        android:label="Reminder"
+        tools:layout="@layout/fragment_reminder" />
+</navigation>
